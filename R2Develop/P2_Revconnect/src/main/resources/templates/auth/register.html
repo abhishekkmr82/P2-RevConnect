@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up — RevConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link th:href="@{/css/styles.css}" rel="stylesheet" />
+</head>
+
+<body class="auth-page">
+    <div class="auth-card" style="max-width: 520px;">
+        <div class="text-center">
+            <div class="auth-logo"
+                style="background: linear-gradient(135deg, #f97316, #f59e0b); padding: 8px; border-radius: 12px; display: inline-flex;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-message-square-code-icon lucide-message-square-code">
+                    <path
+                        d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" />
+                    <path d="m10 8-3 3 3 3" />
+                    <path d="m14 14 3-3-3-3" />
+                </svg>
+            </div>
+            <div style="font-weight: 800; font-size: 1.5rem; margin-top: 0.5rem; letter-spacing: -0.03em;">RevConnect
+            </div>
+            <p class="auth-tagline">Join our community and connect with others.</p>
+        </div>
+
+        <!-- Validation / server-side error messages -->
+        <div class="alert alert-error" th:if="${errorMessage}">
+            <i data-lucide="alert-circle" style="width: 18px;"></i>
+            <span th:text="${errorMessage}"></span>
+        </div>
+
+        <!-- Bean validation errors -->
+        <div class="alert alert-error" th:if="${#fields.hasErrors('*')}" th:each="err : ${#fields.allErrors()}"
+            th:text="${err}">
+        </div>
+
+        <!--
+        Register form — REQUIRES CSRF token just like login.
+        th:object="${registerDTO}" binds to the RegisterDTO added in model.
+    -->
+        <form th:action="@{/register}" th:object="${registerDTO}" method="post">
+
+            <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                <div class="form-group" style="flex: 1; margin-bottom: 0;">
+                    <label class="form-label" for="fullName">Full Name</label>
+                    <input type="text" id="fullName" th:field="*{fullName}" class="form-control"
+                        placeholder="John Doe" />
+                </div>
+                <div class="form-group" style="flex: 1; margin-bottom: 0;">
+                    <label class="form-label" for="username">Username <span
+                            style="color:var(--danger);">*</span></label>
+                    <input type="text" id="username" th:field="*{username}" class="form-control" placeholder="johndoe"
+                        required minlength="3" maxlength="50" />
+                    <small class="text-muted text-xs" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"
+                        style="color: var(--danger);"></small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="email">Email Address <span style="color:var(--danger);">*</span></label>
+                <input type="email" id="email" th:field="*{email}" class="form-control" placeholder="john@example.com"
+                    required />
+                <small class="text-muted text-xs" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+                    style="color: var(--danger);"></small>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="password">Password <span style="color:var(--danger);">*</span></label>
+                <input type="password" id="password" th:field="*{password}" class="form-control"
+                    placeholder="Minimum 6 characters" required minlength="6" />
+                <small class="text-muted text-xs" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
+                    style="color: var(--danger);"></small>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="securityQuestion">Security Question <span
+                        style="color:var(--danger);">*</span></label>
+                <select id="securityQuestion" th:field="*{securityQuestion}" class="form-control" required>
+                    <option value="" disabled selected>Select a security question</option>
+                    <option value="What is your favourite sport?">What is your favourite sport?</option>
+                    <option value="What is your favourite colour?">What is your favourite colour?</option>
+                    <option value="What was your first school?">What was your first school?</option>
+                </select>
+                <small class="text-muted text-xs" th:if="${#fields.hasErrors('securityQuestion')}"
+                    th:errors="*{securityQuestion}" style="color: var(--danger);"></small>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="securityAnswer">Security Answer <span
+                        style="color:var(--danger);">*</span></label>
+                <input type="text" id="securityAnswer" th:field="*{securityAnswer}" class="form-control"
+                    placeholder="Enter your answer" required />
+                <small class="text-muted text-xs" th:if="${#fields.hasErrors('securityAnswer')}"
+                    th:errors="*{securityAnswer}" style="color: var(--danger);"></small>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="role">Account Type</label>
+                <select id="role" th:field="*{role}" class="form-control">
+                    <option th:each="r : ${roles}" th:value="${r}" th:text="${r}"></option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full mt-4">
+                <i data-lucide="user-plus" style="width: 18px; margin-right: 0.5rem;"></i>
+                Create Account
+            </button>
+        </form>
+
+        <div style="margin: 2rem 0; display: flex; align-items: center; gap: 1rem;">
+            <div style="flex: 1; height: 1px; background: var(--border-color);"></div>
+            <span class="text-xs text-muted" style="font-weight: 600;">OR</span>
+            <div style="flex: 1; height: 1px; background: var(--border-color);"></div>
+        </div>
+
+        <p class="text-center text-sm text-secondary">
+            Already have an account?
+            <a th:href="@{/login}" class="font-bold icon-lavender" style="font-weight: 600;">Sign In</a>
+        </p>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

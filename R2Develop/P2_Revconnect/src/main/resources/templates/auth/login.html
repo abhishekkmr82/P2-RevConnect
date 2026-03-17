@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In — RevConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link th:href="@{/css/styles.css}" rel="stylesheet" />
+</head>
+
+<body class="auth-page">
+    <div class="auth-card">
+        <div class="text-center">
+            <div class="auth-logo"
+                style="background: linear-gradient(135deg, #f97316, #f59e0b); padding: 8px; border-radius: 12px; display: inline-flex;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-message-square-code-icon lucide-message-square-code">
+                    <path
+                        d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" />
+                    <path d="m10 8-3 3 3 3" />
+                    <path d="m14 14 3-3-3-3" />
+                </svg>
+            </div>
+            <div style="font-weight: 800; font-size: 1.5rem; margin-top: 0.5rem; letter-spacing: -0.03em;">RevConnect
+            </div>
+            <p class="auth-tagline">Welcome back! Please enter your details.</p>
+        </div>
+
+        <!-- Error / Success Alerts -->
+        <div class="alert alert-error" th:if="${param.error != null or errorMessage != null}"
+            style="margin-bottom: 1.5rem; text-align: left;">
+            <i data-lucide="alert-circle" style="width: 18px;"></i>
+            <span th:text="${errorMessage ?: 'Invalid username or password.'}"></span>
+        </div>
+
+        <div class="alert alert-success" th:if="${param.logout != null or successMessage != null}"
+            style="margin-bottom: 1.5rem; text-align: left;">
+            <i data-lucide="check-circle" style="width: 18px;"></i>
+            <span th:text="${successMessage ?: 'You have been logged out successfully.'}"></span>
+        </div>
+
+        <!--
+        IMPORTANT: Spring Security form login requires:
+        1. The CSRF hidden input (th:name / th:value)
+        2. Username field named exactly as configured: 'usernameOrEmail'
+        3. Password field named 'password'
+        These must match WebSecurityConfig.usernameParameter() and passwordParameter()
+    -->
+        <form th:action="@{/login}" method="post">
+
+            <div class="form-group">
+                <label class="form-label" for="usernameOrEmail">Username or Email</label>
+                <input type="text" id="usernameOrEmail" name="usernameOrEmail" class="form-control"
+                    placeholder="Enter your username or email" required autofocus />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control"
+                    placeholder="Enter your password" required />
+            </div>
+
+            <div style="text-align: right; margin-bottom: 0.5rem;">
+                <a th:href="@{/forgot-password}" class="text-sm icon-sky"
+                    style="font-weight: 500; text-decoration: none;">
+                    <i data-lucide="key"
+                        style="width: 14px; height: 14px; vertical-align: middle; margin-right: 0.25rem;"></i>
+                    Forgot Password?
+                </a>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full mt-4">
+                <i data-lucide="log-in" style="width: 18px; margin-right: 0.5rem;"></i>
+                Log In
+            </button>
+        </form>
+
+        <div style="margin: 2rem 0; display: flex; align-items: center; gap: 1rem;">
+            <div style="flex: 1; height: 1px; background: var(--border-color);"></div>
+            <span class="text-xs text-muted" style="font-weight: 600;">OR</span>
+            <div style="flex: 1; height: 1px; background: var(--border-color);"></div>
+        </div>
+
+        <p class="text-center text-sm text-secondary">
+            Don't have an account?
+            <a th:href="@{/register}" class="font-bold icon-sky" style="font-weight: 600;">Create one now</a>
+        </p>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

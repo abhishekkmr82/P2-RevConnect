@@ -1,0 +1,82 @@
+2026-03-09 12:50:13.331 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-09 12:50:13.395 [main] INFO  com.rev.app.P2RevConnectApplication - Starting P2RevConnectApplication using Java 21.0.10 with PID 27128 (C:\Users\mynam\Downloads\R2Develop2.0\R2Develop\P2_Revconnect\target\classes started by mynam in C:\Users\mynam\Downloads\R2Develop2.0)
+2026-03-09 12:50:13.401 [main] DEBUG com.rev.app.P2RevConnectApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-09 12:50:13.403 [main] INFO  com.rev.app.P2RevConnectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-09 12:50:15.896 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2026-03-09 12:50:15.899 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-09 12:50:15.899 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-03-09 12:50:15.978 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-09 12:50:16.032 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-09 12:50:16.521 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:revconnectdb user=SA
+2026-03-09 12:50:16.524 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-09 12:50:16.786 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-09 12:50:16.919 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-09 12:50:17.009 [main] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-09 12:50:17.520 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-09 12:50:19.588 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-09 12:50:22.868 [main] DEBUG com.rev.app.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2026-03-09 12:50:25.493 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2026-03-09 12:50:25.589 [main] INFO  com.rev.app.P2RevConnectApplication - Started P2RevConnectApplication in 12.66 seconds (process running for 14.126)
+2026-03-09 12:50:25.596 [main] INFO  com.rev.app.P2RevConnectApplication - RevConnect P2 Application Started Successfully!
+2026-03-09 12:50:26.126 [http-nio-8082-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-09 14:01:09.737 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56m24s683ms104µs800ns).
+2026-03-09 14:02:10.761 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-09 14:02:10.786 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-09 14:21:22.827 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-09 14:21:22.859 [main] INFO  com.rev.app.P2RevConnectApplication - Starting P2RevConnectApplication using Java 21.0.10 with PID 22480 (C:\Users\mynam\Downloads\R2Develop2.0\R2Develop\P2_Revconnect\target\classes started by mynam in C:\Users\mynam\Downloads\R2Develop2.0)
+2026-03-09 14:21:22.862 [main] DEBUG com.rev.app.P2RevConnectApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-09 14:21:22.863 [main] INFO  com.rev.app.P2RevConnectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-09 14:21:24.180 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2026-03-09 14:21:24.182 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-09 14:21:24.182 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-03-09 14:21:24.227 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-09 14:21:24.263 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-09 14:21:24.485 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:revconnectdb user=SA
+2026-03-09 14:21:24.486 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-09 14:21:24.593 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-09 14:21:24.645 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-09 14:21:24.680 [main] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-09 14:21:24.999 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-09 14:21:26.133 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-09 14:21:27.509 [main] DEBUG com.rev.app.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2026-03-09 14:21:29.423 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2026-03-09 14:21:29.457 [main] INFO  com.rev.app.P2RevConnectApplication - Started P2RevConnectApplication in 6.884 seconds (process running for 8.251)
+2026-03-09 14:21:29.461 [main] INFO  com.rev.app.P2RevConnectApplication - RevConnect P2 Application Started Successfully!
+2026-03-09 14:21:56.576 [http-nio-8082-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-09 14:22:41.742 [http-nio-8082-exec-4] INFO  com.rev.app.service.UserService - Registering new user: query0
+2026-03-09 14:22:42.414 [http-nio-8082-exec-4] INFO  com.rev.app.service.UserService - User registered successfully with id: 1
+2026-03-09 14:22:42.487 [http-nio-8082-exec-4] INFO  com.rev.app.controller.AuthController - AuthController: Registration successful for user: query0. Redirecting to login.
+2026-03-09 14:23:05.575 [http-nio-8082-exec-8] INFO  com.rev.app.config.CustomUserDetailsService - Security: Attempting to load user by identifier: query0
+2026-03-09 14:23:05.625 [http-nio-8082-exec-8] INFO  com.rev.app.config.CustomUserDetailsService - Security: User found: query0. Role: PERSONAL
+2026-03-09 14:23:07.201 [http-nio-8082-exec-3] DEBUG com.rev.app.exception.GlobalExceptionHandler - Static resource not found: No static resource favicon.ico.
+2026-03-09 14:23:34.709 [http-nio-8082-exec-9] INFO  com.rev.app.controller.FeedController - Controller: Received post request from user: query0
+2026-03-09 14:23:34.717 [http-nio-8082-exec-9] INFO  com.rev.app.controller.FeedController - Controller: Content length: 6
+2026-03-09 14:23:34.717 [http-nio-8082-exec-9] INFO  com.rev.app.controller.FeedController - Controller: Image presence: true, Original Filename: buddha-statue-with-nature-landscape.jpg
+2026-03-09 14:23:34.717 [http-nio-8082-exec-9] INFO  com.rev.app.service.PostService - Service: Creating post for user: query0 (Image attached: true)
+2026-03-09 14:23:34.750 [http-nio-8082-exec-9] INFO  com.rev.app.service.PostService - Service: Image saved successfully at: /uploads/post-images/3848aa8c-cd7a-47c4-b7c3-bd049663b852_buddha-statue-with-nature-landscape.jpg
+2026-03-09 14:23:39.685 [http-nio-8082-exec-2] DEBUG com.rev.app.service.InteractionService - query0 liked post 1
+2026-03-09 14:25:14.347 [http-nio-8082-exec-4] INFO  com.rev.app.service.UserService - Attempting password reset for: query@gmail.com
+2026-03-09 14:25:14.855 [http-nio-8082-exec-4] INFO  com.rev.app.service.UserService - Password reset successful for user: query0
+2026-03-09 14:25:14.885 [http-nio-8082-exec-4] INFO  com.rev.app.controller.AuthController - AuthController: Password reset successful for: query@gmail.com
+2026-03-09 14:25:35.432 [http-nio-8082-exec-8] INFO  com.rev.app.config.CustomUserDetailsService - Security: Attempting to load user by identifier: query@gmail.com
+2026-03-09 14:25:35.435 [http-nio-8082-exec-8] INFO  com.rev.app.config.CustomUserDetailsService - Security: User found: query0. Role: PERSONAL
+2026-03-09 14:25:42.221 [http-nio-8082-exec-1] DEBUG com.rev.app.service.UserService - Searching users with query: 
+2026-03-09 14:46:02.754 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-09 14:46:02.856 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-09 15:25:34.802 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-09 15:25:34.854 [main] INFO  com.rev.app.P2RevConnectApplication - Starting P2RevConnectApplication using Java 21.0.10 with PID 15592 (C:\Users\mynam\Downloads\R2Develop2.0\R2Develop\P2_Revconnect\target\classes started by mynam in C:\Users\mynam\Downloads\R2Develop2.0)
+2026-03-09 15:25:34.858 [main] DEBUG com.rev.app.P2RevConnectApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-09 15:25:34.859 [main] INFO  com.rev.app.P2RevConnectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-09 15:25:37.058 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-09 15:25:37.341 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:revconnectdb user=SA
+2026-03-09 15:25:37.343 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-09 15:25:37.502 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-09 15:25:37.605 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-09 15:25:37.646 [main] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-09 15:25:37.960 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-09 15:25:39.329 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-09 15:25:40.666 [main] DEBUG com.rev.app.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2026-03-09 15:25:42.520 [main] INFO  com.rev.app.P2RevConnectApplication - Started P2RevConnectApplication in 8.081 seconds (process running for 9.646)
+2026-03-09 15:25:42.523 [main] INFO  com.rev.app.P2RevConnectApplication - RevConnect P2 Application Started Successfully!
+2026-03-09 15:25:42.620 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-09 15:25:42.622 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

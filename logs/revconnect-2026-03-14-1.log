@@ -1,0 +1,33 @@
+2026-03-14 09:26:04.910 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2026-03-14 09:26:04.956 [main] INFO  com.rev.app.P2RevConnectApplication - Starting P2RevConnectApplication using Java 21.0.10 with PID 4124 (C:\Users\mynam\Downloads\R2Develop2.0\R2Develop\P2_Revconnect\target\classes started by mynam in C:\Users\mynam\Downloads\R2Develop2.0)
+2026-03-14 09:26:04.959 [main] DEBUG com.rev.app.P2RevConnectApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-14 09:26:04.961 [main] INFO  com.rev.app.P2RevConnectApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-14 09:26:06.564 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2026-03-14 09:26:06.566 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-14 09:26:06.566 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-03-14 09:26:06.615 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-14 09:26:06.658 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-14 09:26:06.904 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:revconnectdb user=SA
+2026-03-14 09:26:06.906 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-14 09:26:07.020 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-14 09:26:07.089 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-14 09:26:07.134 [main] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-14 09:26:07.410 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-14 09:26:08.618 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-14 09:26:10.014 [main] DEBUG com.rev.app.security.JwtRequestFilter - Filter 'jwtRequestFilter' configured for use
+2026-03-14 09:26:11.768 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2026-03-14 09:26:11.838 [main] INFO  com.rev.app.P2RevConnectApplication - Started P2RevConnectApplication in 7.222 seconds (process running for 8.588)
+2026-03-14 09:26:11.843 [main] INFO  com.rev.app.P2RevConnectApplication - RevConnect P2 Application Started Successfully!
+2026-03-14 09:26:25.360 [http-nio-8082-exec-7] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-14 09:27:30.346 [http-nio-8082-exec-3] INFO  com.rev.app.service.UserService - Registering new user: shreya
+2026-03-14 09:27:31.099 [http-nio-8082-exec-3] INFO  com.rev.app.service.UserService - User registered successfully with id: 1
+2026-03-14 09:27:31.200 [http-nio-8082-exec-3] INFO  com.rev.app.controller.AuthController - AuthController: Registration successful for user: shreya. Redirecting to login.
+2026-03-14 09:27:51.905 [http-nio-8082-exec-2] INFO  com.rev.app.config.CustomUserDetailsService - Security: Attempting to load user by identifier: shreyamusic@gmail.com
+2026-03-14 09:27:51.969 [http-nio-8082-exec-2] INFO  com.rev.app.config.CustomUserDetailsService - Security: User found: shreya. Role: CREATOR
+2026-03-14 09:27:52.205 [http-nio-8082-exec-2] INFO  com.rev.app.config.CustomUserDetailsService - Security: Attempting to load user by identifier: shreyamusic@gmail.com
+2026-03-14 09:27:52.215 [http-nio-8082-exec-2] INFO  com.rev.app.config.CustomUserDetailsService - Security: User found: shreya. Role: CREATOR
+2026-03-14 09:29:39.998 [http-nio-8082-exec-4] INFO  com.rev.app.config.CustomUserDetailsService - Security: Attempting to load user by identifier: shreyamusic@gmail.com
+2026-03-14 09:29:40.001 [http-nio-8082-exec-4] INFO  com.rev.app.config.CustomUserDetailsService - Security: User found: shreya. Role: CREATOR
+2026-03-14 09:29:41.635 [http-nio-8082-exec-8] DEBUG com.rev.app.exception.GlobalExceptionHandler - Static resource not found: No static resource favicon.ico.
+2026-03-14 09:43:46.726 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-14 09:43:46.763 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
